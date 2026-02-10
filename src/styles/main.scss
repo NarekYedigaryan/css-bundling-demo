@@ -1,0 +1,20 @@
+// Import all SCSS modules
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/typography';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/navigation';
+@import 'utils/mixins';
+
+// App specific styles
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  
+  h1 {
+    color: $primary;
+    margin-bottom: 1rem;
+  }
+}

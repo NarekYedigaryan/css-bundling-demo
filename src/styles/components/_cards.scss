@@ -1,0 +1,95 @@
+  // Card Component
+.card {
+  background: white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  transition: all $transition-base;
+  margin-bottom: $spacing-lg;
+  
+  &:hover {
+    box-shadow: $shadow-lg;
+    transform: translateY(-2px);
+  }
+}
+
+.card-header {
+  padding: $spacing-lg;
+  border-bottom: 1px solid $gray-200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  .card-title {
+    margin: 0;
+    font-size: 1.25rem;
+    color: $primary;
+  }
+}
+
+.card-body {
+  padding: $spacing-lg;
+}
+
+.card-footer {
+  padding: $spacing-lg;
+  border-top: 1px solid $gray-200;
+  display: flex;
+  gap: $spacing-md;
+  background: $gray-100;
+}
+
+// Badge
+.badge {
+  display: inline-block;
+  padding: $spacing-sm * 0.25 $spacing-sm;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: $border-radius-sm * 2;
+  
+  &.badge-primary {
+    background: $primary;
+    color: white;
+  }
+  
+  &.badge-secondary {
+    background: $secondary;
+    color: white;
+  }
+  
+  &.badge-warning {
+    background: $warning;
+    color: white;
+  }
+}
+
+// Stat Card
+.stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: $spacing-xl;
+  border-radius: $border-radius-lg;
+  text-align: center;
+  transition: transform $transition-base;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: $spacing-sm;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin: 0;
+  }
+}

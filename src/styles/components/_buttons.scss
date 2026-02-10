@@ -1,0 +1,103 @@
+  // Button Base
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  padding: $spacing-sm $spacing-lg;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: $border-radius-md;
+  transition: all $transition-base;
+  
+  i {
+    font-size: 0.875em;
+  }
+  
+  &:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba($primary, 0.3);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// Button Variants
+.btn-primary {
+  background: linear-gradient(135deg, $primary 0%, $primary-dark 100%);
+  color: white;
+  border: none;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: $shadow-lg;
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.btn-secondary {
+  background: $secondary;
+  color: white;
+  border: none;
+  
+  &:hover:not(:disabled) {
+    background: darken($secondary, 10%);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $primary;
+  border: 1px solid $primary;
+  
+  &:hover:not(:disabled) {
+    background: $primary;
+    color: white;
+  }
+}
+
+// Button Sizes
+.btn-sm {
+  padding: $spacing-sm * 0.5 $spacing-md;
+  font-size: 0.75rem;
+}
+
+.btn-lg {
+  padding: $spacing-md $spacing-xl;
+  font-size: 1rem;
+}
+
+// Button Group
+.btn-group {
+  display: inline-flex;
+  gap: $spacing-sm;
+  
+  .btn {
+    border-radius: 0;
+    
+    &:first-child {
+      border-top-left-radius: $border-radius-md;
+      border-bottom-left-radius: $border-radius-md;
+    }
+    
+    &:last-child {
+      border-top-right-radius: $border-radius-md;
+      border-bottom-right-radius: $border-radius-md;
+    }
+  }
+}
